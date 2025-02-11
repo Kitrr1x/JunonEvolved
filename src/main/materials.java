@@ -9,10 +9,10 @@ import java.util.Map;
 
 public class Materials {
 
-    private static final String RESOURCES_FILE = "resources.json";
-    private static final String COMPONENTS_FILE = "components.json";
-    private static final String FOODS_FILE = "foods.json";
-    private static final String CROPS_FILE = "crops.json";
+private static final String RESOURCES_FILE = "Json/resources.json";
+private static final String COMPONENTS_FILE = "Json/components.json";
+private static final String FOODS_FILE = "Json/foods.json";
+private static final String CROPS_FILE = "Json/crops.json";
 
     private Map<String, Resource> resources = new HashMap<>();
     private Map<String, Component> components = new HashMap<>();
