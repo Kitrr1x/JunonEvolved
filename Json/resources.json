@@ -1,1 +1,66 @@
-
+[
+  {
+    "id": "iron",
+    "name": "Iron Ore",
+    "description": "A basic resource used for building and crafting.",
+    "type": "ore",
+    "value": 15,
+    "stackSize": 100
+  },
+  {
+    "id": "copper",
+    "name": "Copper Ore",
+    "description": "Used for electrical components and alloys.",
+    "type": "ore",
+    "value": 15,
+    "stackSize": 100
+  },
+  {
+    "id": "lead",
+    "name": "Lead Ore",
+    "description": "Used for radiation shielding and ammunition.",
+    "type": "ore",
+    "value": 15,
+    "stackSize": 100
+  },
+  {
+    "id": "titanium",
+    "name": "Titanium Ore",
+    "description": "A top-tier resource for advanced armor and spacecraft.",
+    "type": "ore",
+    "value": 100,
+    "stackSize": 100
+  },
+  {
+    "id": "chromium",
+    "name": "Chromium Ore",
+    "description": "Used for high-strength alloys and energy weapons.",
+    "type": "ore",
+    "value": 100,
+    "stackSize": 100
+  },
+  {
+    "id": "silicon",
+    "name": "Silicon Ore",
+    "description": "Used for microelectronics and solar panels.",
+    "type": "ore",
+    "value": 20,
+    "stackSize": 100
+  },
+  {
+    "id": "coal",
+    "name": "Coal",
+    "description": "Used for generating power and fuel.",
+    "type": "ore",
+    "value": 10,
+    "stackSize": 100
+  },
+  {
+    "id": "sand",
+    "name": "Sand",
+    "description": "Used for making glass and concrete.",
+    "type": "ore",
+    "value": 5,
+    "stackSize": 200
+  }
+]
