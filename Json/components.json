@@ -1,1 +1,48 @@
-
+[
+  {
+    "id": "glass",
+    "name": "Glass",
+    "description": "A transparent material used for windows and other applications.",
+    "type": "component",
+    "value": 50,
+    "stackSize": 100,
+    "requirements": [
+      {
+        "id": "sand",
+        "amount": 3
+      }
+    ]
+  },
+  {
+    "id": "fabric",
+    "name": "Fabric",
+    "description": "A versatile material used for clothing and other applications.",
+    "type": "component",
+    "value": 60,
+    "stackSize": 100,
+    "requirements": [
+      {
+        "id": "cotton",
+        "amount": 2
+      }
+    ]
+  },
+  {
+    "id": "microchip",
+    "name": "Microchip",
+    "description": "An essential component for electronics and automation.",
+    "type": "component",
+    "value": 100,
+    "stackSize": 100,
+    "requirements": [
+      {
+        "id": "silicon",
+        "amount": 1
+      },
+      {
+        "id": "copper",
+        "amount": 1
+      }
+    ]
+  }
+]
