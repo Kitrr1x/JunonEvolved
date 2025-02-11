@@ -1,1 +1,142 @@
-
+[
+  {
+    "id": "french_fries",
+    "name": "French Fries",
+    "description": "Crispy and delicious fried potatoes.",
+    "type": "food",
+    "hungerRestore": 30,
+    "value": 50,
+    "stackSize": 100,
+    "cookTime": 5,
+    "requirements": [
+      {
+        "id": "potato",
+        "amount": 2
+      }
+    ]
+  },
+  {
+    "id": "bread",
+    "name": "Bread",
+    "description": "A staple food made from wheat.",
+    "type": "food",
+    "hungerRestore": 20,
+    "value": 30,
+    "stackSize": 100,
+    "cookTime": 5,
+    "requirements": [
+      {
+        "id": "wheat",
+        "amount": 2
+      }
+    ]
+  },
+  {
+    "id": "salad",
+    "name": "Salad",
+    "description": "A refreshing mix of greens.",
+    "type": "food",
+    "hungerRestore": 25,
+    "value": 40,
+    "stackSize": 50,
+    "cookTime": 5,
+    "requirements": [
+      {
+        "id": "greens",
+        "amount": 3
+      }
+    ]
+  },
+  {
+    "id": "soup",
+    "name": "Soup",
+    "description": "A hearty and nutritious soup.",
+    "type": "food",
+    "hungerRestore": 40,
+    "value": 60,
+    "stackSize": 100,
+    "cookTime": 5,
+    "requirements": [
+      {
+        "id": "potato",
+        "amount": 1
+      },
+      {
+        "id": "greens",
+        "amount": 2
+      }
+    ]
+  },
+  {
+    "id": "pizza",
+    "name": "Pizza",
+    "description": "A classic dish with a variety of toppings.",
+    "type": "food",
+    "hungerRestore": 50,
+    "value": 100,
+    "stackSize": 100,
+    "cookTime": 5,
+    "requirements": [
+      {
+        "id": "wheat",
+        "amount": 1
+      },
+      {
+        "id": "greens",
+        "amount": 2
+      }
+    ]
+  },
+  {
+    "id": "jelly",
+    "name": "Jelly",
+    "description": "A sweet and wobbly dessert.",
+    "type": "food",
+    "hungerRestore": 30,
+    "value": 50,
+    "stackSize": 100,
+    "cookTime": 5,
+    "requirements": [
+      {
+        "id": "strawberry",
+        "amount": 3
+      }
+    ]
+  },
+  {
+    "id": "pilaf",
+    "name": "Pilaf",
+    "description": "A flavorful rice dish.",
+    "type": "food",
+    "hungerRestore": 40,
+    "value": 70,
+    "stackSize": 100,
+    "cookTime": 5,
+    "requirements": [
+      {
+        "id": "rice",
+        "amount": 2
+      }
+    ]
+  },
+  {
+    "id": "shawarma",
+    "name": "Shawarma",
+    "description": "A popular street food with seasoned meat and vegetables.",
+    "type": "food",
+    "hungerRestore": 50,
+    "value": 60,
+    "stackSize": 100,
+    "cookTime": 5,
+    "requirements": [
+      {
+        "id": "wheat",
+        "amount": 1
+      },
+      {
+        "id": "greens",
+        "amount": 2
+      }
+    ]
+  }
+]
