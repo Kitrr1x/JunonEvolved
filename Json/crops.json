@@ -1,0 +1,82 @@
+[
+  {
+    "id": "potato",
+    "name": "Potato",
+    "description": "A versatile crop that can be used for food and energy production.",
+    "type": "crop",
+    "value": 15,
+    "stackSize": 100,
+    "growTime": 600,
+    "yield": 3
+  },
+  {
+    "id": "rice",
+    "name": "Rice",
+    "description": "A staple food crop that provides essential carbohydrates.",
+    "type": "crop",
+    "value": 15,
+    "stackSize": 100,
+    "growTime": 600,
+    "yield": 3
+  },
+  {
+    "id": "wheat",
+    "name": "Wheat",
+    "description": "A versatile crop used for making bread and other baked goods.",
+    "type": "crop",
+    "value": 20,
+    "stackSize": 100,
+    "growTime": 600,
+    "yield": 5
+  },
+  {
+    "id": "cotton",
+    "name": "Cotton",
+    "description": "A valuable crop used for making fabric.",
+    "type": "crop",
+    "value": 20,
+    "stackSize": 80,
+    "growTime": 780,
+    "yield": 2
+  },
+  {
+    "id": "strawberry",
+    "name": "Strawberry",
+    "description": "A delicious and nutritious fruit crop.",
+    "type": "crop",
+    "value": 25,
+    "stackSize": 100,
+    "growTime": 540,
+    "yield": 5
+  },
+  {
+    "id": "poppy",
+    "name": "Poppy",
+    "description": "A crop used for medicinal purposes.",
+    "type": "crop",
+    "value": 30,
+    "stackSize": 100,
+    "growTime": 1200,
+    "yield": 1
+  },
+  {
+    "id": "peony",
+    "name": "Peony",
+    "description": "A beautiful flower crop used for decorative and medicinal purposes.",
+    "type": "crop",
+    "value": 500,
+    "stackSize": 100,
+    "growTime": 1200,
+    "yield": 1
+  },
+  {
+    "id": "greens",
+    "name": "Greens",
+    "description": "A variety of leafy green vegetables rich in vitamins.",
+    "type": "crop",
+    "value": 20,
+    "stackSize": 100,
+    "growTime": 360,
+    "yield": 6
+  }
+]
