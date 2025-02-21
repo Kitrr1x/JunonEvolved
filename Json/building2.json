@@ -1,0 +1,93 @@
+[
+  {
+    "id": "wall",
+    "name": "Wall",
+    "description": "Wall for constructing buildings.",
+    "type": "wall",
+    "health": 1000,
+    "value": 30,
+    "stackSize": 100,
+    "armor": 5,
+    "requirements": [
+      {
+        "id": "iron",
+        "amount": 10
+      }
+    ]
+  },
+  {
+    "id": "armored_wall",
+    "name": "Armored Wall",
+    "description": "A heavily armored wall for maximum protection.",
+    "type": "wall",
+    "health": 2500,
+    "value": 80,
+    "stackSize": 100,
+    "armor": 15,
+    "requirements": [
+      {
+        "id": "iron",
+        "amount": 20
+      },
+      {
+        "id": "lead",
+        "amount": 10
+      }
+    ]
+  },
+  {
+    "id": "titanium_wall",
+    "name": "Titanium Wall",
+    "description": "The ultimate wall, forged from titanium for unparalleled protection.",
+    "type": "wall",
+    "buildingHealth": 5000,
+    "value": 150,
+    "stackSize": 100,
+    "armor": 30,
+    "requirements": [
+      {
+        "id": "titanium",
+        "amount": 15
+      },
+      {
+        "id": "chromium",
+        "amount": 5
+      }
+    ]
+  },
+  {
+    "id": "wooden_door",
+    "name": "Wooden Door",
+    "description": "A simple wooden door for basic security.",
+    "type": "door",
+    "health": 500,
+    "value": 20,
+    "stackSize": 100,
+    "requirements": [
+      {
+        "id": "wood",
+        "amount": 5
+      }
+    ]
+  },
+  {
+    "id": "metal_door",
+    "name": "Metal door",
+    "description": "A sturdy iron door for improved security.",
+    "type": "door",
+    "health": 1000,
+    "value": 60,
+    "stackSize": 100,
+    "armor": 5,
+    "requirements": [
+      {
+        "id": "iron",
+        "amount": 10
+      },
+      {
+        "id": "copper",
+        "amount": 2
+      }
+    ]
+  }
+]
