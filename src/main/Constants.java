@@ -7,13 +7,13 @@ import java.nio.file.Paths;
 import java.util.HashMap;
 import java.util.Map;
 
-public class GameData {
+public class Constants {
 
-    private static final String BUILDING_FILE = "building.json";
-    private static final String RESOURCES_FILE = "resources.json";
-    private static final String COMPONENTS_FILE = "components.json";
-    private static final String FOODS_FILE = "foods.json";
-    private static final String CROPS_FILE = "crops.json";
+private static final String BUILDING_FILE = "Json/building.json";
+private static final String RESOURCES_FILE = "Json/resources.json";
+private static final String COMPONENTS_FILE = "Json/components.json";
+private static final String FOODS_FILE = "Json/foods.json";
+private static final String CROPS_FILE = "Json/crops.json";
 
     private Map<String, Building> buildings = new HashMap<>();
     private Map<String, Resource> resources = new HashMap<>();
@@ -21,9 +21,9 @@ public class GameData {
     private Map<String, Food> foods = new HashMap<>();
     private Map<String, Crop> crops = new HashMap<>();
 
-    private static GameData instance;
+    private static Constants instance;
 
-    private GameData() {
+    private Constants() {
         loadBuildings();
         loadResources();
         loadComponents();
@@ -31,15 +31,15 @@ public class GameData {
         loadCrops();
     }
 
-    public static GameData getInstance() {
+    public static Constants getInstance() {
         if (instance == null) {
-            instance = new GameData();
+            instance = new Constants();
         }
         return instance;
     }
 
     private void loadBuildings() {
-        loadBuildingData(BUILDING_FILE, buildings, Building.class);
+        loadResourceData(BUILDING_FILE, buildings, Building.class);
     }
 
     private void loadResources() {
@@ -102,7 +102,7 @@ public class GameData {
                    int yield = jsonObject.getInt("yield");
                    resource = (T) new Crop(id,name,description,type,value,stackSize,growTime,yield);
                 } else if (resourceClass == Building.class) {
-                    int health = jsonObject.getInt("health");
+                    int buildingHealth = jsonObject.getInt("buildingHealth");
                     int armor = jsonObject.getInt("armor");
 
                     JSONArray requirementsJson = jsonObject.getJSONArray("requirements");
@@ -113,7 +113,7 @@ public class GameData {
                         int amount = requirementJson.getInt("amount");
                         requirements.put(requirementId, amount);
                     }
-                    resource = (T) new Building(id, name, description, type, value, stackSize, health, armor, requirements);
+                    resource = (T) new Building(id, name, description, type, value, stackSize, buildingHealth, armor, requirements);
                 }
                 else {
                     resource = (T) new Resource(id, name, description, type, value, stackSize);
@@ -127,24 +127,23 @@ public class GameData {
         }
     }
 
-
-    public Building getBuilding(String id) {
+    public Building getbuilding(String id) {
         return buildings.get(id);
     }
 
-    public Resource getResource(String id) {
+    public Resource getresource(String id) {
         return resources.get(id);
     }
 
-    public Component getComponent(String id) {
+    public Component getcomponent(String id) {
         return components.get(id);
     }
 
-    public Food getFood(String id) {
+    public Food getfood(String id) {
         return foods.get(id);
     }
 
-    public Crop getCrop(String id) { return crops.get(id); }
+    public Crop getcrop(String id) { return crops.get(id); }
 
     // Вспомогательные классы для ресурсов
     public static class Resource {
@@ -201,7 +200,7 @@ public class GameData {
         }
     }
 
-    public static class Component extends Resource {
+    public static class Component {
         private Map<String, Integer> requirements;
 
         public Component(String id, String name, String description, String type, int value, int stackSize, Map<String, Integer> requirements) {
@@ -227,7 +226,7 @@ public class GameData {
         }
     }
 
-    public static class Food extends Resource {
+    public static class Food {
         private int hungerRestore;
         private int cookTime;
         private Map<String, Integer> requirements;
@@ -267,7 +266,7 @@ public class GameData {
         }
     }
 
-    public static class Crop extends Resource {
+    public static class Crop {
         private int growTime;
         private int yield;
 
@@ -296,62 +295,62 @@ public class GameData {
         }
     }
 
-    public static class Building extends Resource{
-        private int health;
-        private int armor;
-        private Map<String, Integer> requirements;
+     public static class Building {
+            private int health;
+            private int armor;
+            private Map<String, Integer> requirements;
 
-        public Building(String id, String name, String description, String type, int value, int stackSize, int health, int armor, Map<String, Integer> requirements) {
-            super(id, name, description, type, value, stackSize);
-            this.health = health;
-            this.armor = armor;
-            this.requirements = requirements;
-        }
+            public Building(String id, String name, String description, String type, int value, int stackSize, int health, int armor, Map<String, Integer> requirements) {
+                super(id, name, description, type, value, stackSize);
+                this.health = health;
+                this.armor = armor;
+                this.requirements = requirements;
+            }
 
-        public int getHealth() {
-            return health;
-        }
+            public int getHealth() {
+                return health;
+            }
 
-        public int getArmor() {
-            return armor;
-        }
+            public int getArmor() {
+                return armor;
+            }
 
-        public Map<String, Integer> getRequirements() {
-            return requirements;
-        }
+            public Map<String, Integer> getRequirements() {
+                return requirements;
+            }
 
-        @Override
-        public String toString() {
-            return "Building{" +
-                    "id='" + getId() + '\'' +
-                    ", name='" + getName() + '\'' +
-                    ", description='" + getDescription() + '\'' +
-                    ", type='" + getType() + '\'' +
-                    ", value=" + getValue() +
-                    ", stackSize=" + getStackSize() +
-                    ", health=" + health +
-                    ", armor=" + armor +
-                    ", requirements=" + requirements +
-                    '}';
+            @Override
+            public String toString() {
+                return "Building{" +
+                        "id='" + getId() + '\'' +
+                        ", name='" + getName() + '\'' +
+                        ", description='" + getDescription() + '\'' +
+                        ", type='" + getType() + '\'' +
+                        ", value=" + getValue() +
+                        ", stackSize=" + getStackSize() +
+                        ", health=" + health +
+                        ", armor=" + armor +
+                        ", requirements=" + requirements +
+                        '}';
+            }
         }
-    }
 
     public static void main(String[] args) {
-        GameData gameData = GameData.getInstance();
+        Constants constants = Constants.getInstance();
 
-        Building wall = gameData.getBuilding("wall");
+        Building wall = constants.getbuilding("wall");
         System.out.println(wall);
 
-        Resource iron = gameData.getResource("iron");
+        Resource iron = constants.getresource("iron");
         System.out.println(iron);
 
-        Component glass = gameData.getComponent("glass");
+        Component glass = constants.getcomponent("glass");
         System.out.println(glass);
 
-        Food frenchFries = gameData.getFood("french_fries");
+        Food frenchFries = constants.getfood("french_fries");
         System.out.println(frenchFries);
 
-        Crop potato = gameData.getCrop("potato");
+        Crop potato = constants.getcrop("potato");
         System.out.println(potato);
     }
 }
